@@ -1,0 +1,2 @@
+CREATE TABLE users (server VARCHAR(255), name VARCHAR(255), license VARCHAR(255), discord VARCHAR(255), license2 VARCHAR(255), xbl VARCHAR(255), live VARCHAR(255), fivem VARCHAR(255), endpoint VARCHAR(255), ping INT);
+INSERT INTO users (server, name, license, discord, license2, xbl, live, fivem, endpoint, ping) VALUES (' SydneyFA', 'Cabre', '52953829a66104dfd4a1cf30f3ef7f5990714968', '948983125000732753', '52953829a66104dfd4a1cf30f3ef7f5990714968', 'None', 'None', 'None', '127.0.0.1:1234', 45);
