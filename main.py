@@ -51,7 +51,7 @@ async def on_message(message):
             await message.channel.send('Incorrect code, please try again or contact an administrator.')
     await bot.process_commands(message)
 
-# Fonction de connexion à la base de données MySQL
+
 def connect_to_mysql():
     return mysql.connector.connect(
         host="localhost",
@@ -67,7 +67,7 @@ async def utilisateur(ctx, colonne: str, valeur: str):
     colonnes_bloquees = ['ping', 'server', 'endpoint_name']
 
     try:
-        # Vérification si la colonne est bloquée
+ 
         if colonne in colonnes_bloquees:
             await ctx.reply(f"La recherche sur la colonne '{colonne}' est bloquée.")
             return
@@ -87,7 +87,7 @@ async def utilisateur(ctx, colonne: str, valeur: str):
             await ctx.reply(f"Colonne '{colonne}' introuvable.")
             return
 
-        # Exécution de la requête SQL pour rechercher l'utilisateur
+
         query = f"SELECT * FROM users WHERE {colonne} LIKE %s"
         cursor.execute(query, ('%' + valeur + '%',))
         results = cursor.fetchall()
@@ -225,7 +225,7 @@ async def totaluser(ctx):
 
 
     cursor.execute("SELECT COUNT(*) FROM users")
-    total_lignes = cursor.fetchone()[0]  # Récupération du résultat
+    total_lignes = cursor.fetchone()[0] 
 
 
     cursor.close()
